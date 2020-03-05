@@ -29,6 +29,13 @@ To keep it simple, the project tries to use only the tools coming with a fresh i
 
 Additional Software
 -------------------
+**REQUIRED**
+For the ODE solver the project uses BOOST:
+
+$ sudo apt install libboost-dev
+$ sudo apt install libboost-all-dev
+
+**OPTIONAL**
 If you want to see the 2D simulation running, you will need to install SFML:
 
 $ sudo apt-get install libsfml-dev
