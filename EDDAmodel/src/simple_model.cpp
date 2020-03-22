@@ -6,7 +6,7 @@
  * @file    simple_model.cpp
  * @author  Andre Alexander Pieper
  * @version 1.0
- * @date    2020-02-208
+ * @date    2020-03-09
  *
  * @brief   CPP file for the simple ODE motion model of the vehicle.
  *
@@ -38,6 +38,12 @@ SimpleModel::~SimpleModel()
 void SimpleModel::Init()
 {
     std::cout << "Initialization of the Simple Motion Model" << std::endl;
+
+}
+
+void SimpleModel::Run()
+{
+    std::cout << "Run the Simple Motion Model" << std::endl;
 
 }
 

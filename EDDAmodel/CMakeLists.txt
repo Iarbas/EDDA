@@ -10,7 +10,7 @@ find_package(Boost 1.60.0 REQUIRED)
 # Create a static library.
 include_directories(include)
 
-ADD_LIBRARY( ${PROJECT_NAME} STATIC src/simple_model.cpp )
+ADD_LIBRARY( ${PROJECT_NAME} STATIC src/simple_model.cpp src/model_organizer.cpp )
 target_link_libraries( ${PROJECT_NAME} stdc++fs )
 add_dependencies( ${PROJECT_NAME} copy_headers_model )
 
@@ -21,5 +21,5 @@ add_dependencies( copy_headers_model create_folders )
 
 add_custom_command(
         TARGET copy_headers_model PRE_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy include/simple_model.hpp ${CMAKE_HEADERS_OUTPUT_DIRECTORY}/)
+        COMMAND ${CMAKE_COMMAND} -E copy include/*.hpp ${CMAKE_HEADERS_OUTPUT_DIRECTORY}/)
 

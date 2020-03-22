@@ -6,6 +6,7 @@
 
 #include "visual2d.hpp"
 #include "readConfig.hpp"
+#include "model_organizer.hpp"
 #include "cmake_config.h"
 
 using namespace std;
@@ -23,11 +24,16 @@ int main (int argc, char *argv[])
 	EDDAmisc::ReadConfig read_config(help_string);
 
         std::string test_track = "Circle";
+        std::string ode_model = "simple";
 
         read_config.get_parameter("test_circuit", test_track);
+        read_config.get_parameter("ode_model", ode_model);
+
+        // Initialze the model.
+        EDDAmodel::ModelOrganizer model(ode_model);
 
 	// Starting the 2D visualization.
-        help_string = TEST_CIRCUIT_DIRECTORY;    // TEST_CIRCUIT_DIRECTORY - Variable from the CMakeLists.txt in the main project folder.
+        /*help_string = TEST_CIRCUIT_DIRECTORY;    // TEST_CIRCUIT_DIRECTORY - Variable from the CMakeLists.txt in the main project folder.
         help_string.append("/");
         help_string.append(test_track);
 
@@ -119,7 +125,7 @@ int main (int argc, char *argv[])
 		{
 			iter_fps_calc++;
 		}
-	}
+	}*/
 
 	return 0;
 }

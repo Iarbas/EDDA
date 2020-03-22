@@ -8,7 +8,7 @@ The EDDA - Evaluative Data-driven Design Application is a project for a simulati
 Overview
 --------
 
-The Platform is subdivided into intependent programs for:
+The Platform is subdivided into independent programs for:
 
     - EDDAsim | Graphical output for the simulated environment (for the time being, this will be a 2D visualization). This includes:
       + A guide to design own test streets.
@@ -30,15 +30,17 @@ To keep it simple, the project tries to use only the tools coming with a fresh i
 Additional Software
 -------------------
 **REQUIRED**
+
 For the ODE solver the project uses BOOST:
 
-$ sudo apt install libboost-dev
-$ sudo apt install libboost-all-dev
+	$ sudo apt install libboost-dev
+	$ sudo apt install libboost-all-dev
 
 **OPTIONAL**
+
 If you want to see the 2D simulation running, you will need to install SFML:
 
-$ sudo apt-get install libsfml-dev
+	$ sudo apt-get install libsfml-dev
 
 You can also build and run EDDA without visualization (just a few changes to the CMakeLists.txt and the configuration file), but it is recommended to have a look on what your program is doing. For more information about the library, you can read the Wikipedia aricle:
 

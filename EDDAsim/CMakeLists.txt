@@ -28,10 +28,11 @@ target_link_libraries(${PROJECT_NAME}
     ${SFML_LIBRARIES} 
     ${SFML_DEPENDENCIES}
     ${LIBYAML_LIBRARY}
-    Config_Reader    
+    Config_Reader
+    EDDAmodel    
     )
 
-add_dependencies( ${PROJECT_NAME} copy_config copy_circuits Config_Reader)
+add_dependencies( ${PROJECT_NAME} copy_config copy_circuits Config_Reader EDDAmodel)
 
 # Copy the config file and circuit files in the projects own file managment. 
 add_custom_target(copy_config)

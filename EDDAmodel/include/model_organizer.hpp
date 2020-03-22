@@ -3,23 +3,21 @@
  * @par Project
  * EDDA - Evaluative Data-driven Design Application
  *
- * @file    simple_model.hpp
+ * @file    model_organizer.hpp
  * @author  Andre Alexander Pieper
  * @version 1.0
  * @date    2020-03-09
  *
- * @brief   Header file for the simple ODE motion model of the vehicle.
+ * @brief   Header file for the oranization of the models.
  *
- * This program part is responsible for calculating the motion of the vehicle with respect to 
- * the input.
+ * This program part is responsible for the organization of the models.
  */
 // --------------------------------------------------------------------------------------------------------------------
 
-#ifndef HEADER_SIMPLE_MODEL_HPP_AP_28022020
-#define HEADER_SIMPLE_MODEL_HPP_AP_28022020
+#ifndef HEADER_MODEL_ORGANIZER_HPP_AP_09032020
+#define HEADER_MODEL_ORGANIZER_HPP_AP_09032020
 
 #include <string>
-#include <vector>
 
 
 namespace EDDAmodel
@@ -29,17 +27,17 @@ namespace EDDAmodel
  *
  *  Class for the simple ODE motion model of the vehicle.
  */
-class SimpleModel
+class ModelOrganizer
 {
 public:
-	SimpleModel();
-	virtual ~SimpleModel();				// Virtual Destructor.
-
-	void Run();
+	ModelOrganizer(std::string ode_model);
+	virtual ~ModelOrganizer();				// Virtual Destructor.
 
 private:
 	void Init();
+
+        std::string model_name;
 };
 }
 
-#endif // HEADER_SIMPLE_MODEL_HPP_AP_28022020
+#endif // HEADER_MODEL_ORGANIZER_HPP_AP_09032020
