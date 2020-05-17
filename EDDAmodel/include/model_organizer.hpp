@@ -19,6 +19,9 @@
 
 #include <string>
 
+#include "simple_model.hpp"
+#include "seven_state_model.hpp"
+
 
 namespace EDDAmodel
 {
@@ -30,13 +33,15 @@ namespace EDDAmodel
 class ModelOrganizer
 {
 public:
-	ModelOrganizer(std::string ode_model);
+	ModelOrganizer(std::string model_name);
 	virtual ~ModelOrganizer();				// Virtual Destructor.
+
+        EDDAmodel::SimpleModel* simple_ode_model;
 
 private:
 	void Init();
 
-        std::string model_name;
+        std::string _model_name;
 };
 }
 

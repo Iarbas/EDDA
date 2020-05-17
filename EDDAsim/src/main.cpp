@@ -8,6 +8,7 @@
 #include "readConfig.hpp"
 #include "model_organizer.hpp"
 #include "cmake_config.h"
+#include "simple_model.hpp"
 
 using namespace std;
 

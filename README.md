@@ -23,13 +23,17 @@ The Platform is subdivided into independent programs for:
     - EDDAvalidate | Validation of the results. 
     - EDDAoptimal | An optimization tool to enhance the used controller with respect to the result of a simulated drive.
 
-To keep it simple, the project tries to use only the tools coming with a fresh installation of Ubuntu 18.04. Every additional software will be mentioned in this README and will aslo be explained, how to install it.
+To keep it simple, the project tries to use only the tools coming with a fresh installation of Ubuntu 20.04 LTS. Every additional software will be mentioned in this README and will aslo be explained, how to install it.
 
 
 
 Additional Software
 -------------------
 **REQUIRED**
+
+The project uses CMake for managing the build process:
+
+	$ sudo apt install cmake
 
 For the ODE solver the project uses BOOST:
 

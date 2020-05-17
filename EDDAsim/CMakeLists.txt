@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.10.2)
+cmake_minimum_required (VERSION 3.11)
 project (EDDAsim)
 
 # This command and the FindSFML.cmake file in cmake_modules is needed to find SFML.
@@ -6,6 +6,9 @@ project (EDDAsim)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
 
 # Find needed packages.
+# CMake 3.11 and later prefer to choose GLVND (OpenGL libs), so we are using the new version.
+CMAKE_POLICY(SET CMP0023 NEW)
+
 find_package(OpenGL)
 find_package(SFML 2 REQUIRED COMPONENTS graphics window system )
 

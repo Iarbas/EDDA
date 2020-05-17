@@ -28,6 +28,7 @@ namespace EDDAmodel
 SimpleModel::SimpleModel()
 {
     this->Init();
+    SimpleModel::Run();
 }
 
 SimpleModel::~SimpleModel()

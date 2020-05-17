@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.10.2)
+cmake_minimum_required (VERSION 3.11)
 project (EDDAmodel)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
@@ -10,7 +10,7 @@ find_package(Boost 1.60.0 REQUIRED)
 # Create a static library.
 include_directories(include)
 
-ADD_LIBRARY( ${PROJECT_NAME} STATIC src/simple_model.cpp src/model_organizer.cpp )
+ADD_LIBRARY( ${PROJECT_NAME} STATIC src/model_organizer.cpp src/simple_model.cpp src/seven_state_model.cpp)
 target_link_libraries( ${PROJECT_NAME} stdc++fs )
 add_dependencies( ${PROJECT_NAME} copy_headers_model )
 
