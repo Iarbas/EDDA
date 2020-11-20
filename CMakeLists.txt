@@ -27,7 +27,7 @@ set (CONFIG_DIRECTORY ${PARENT_DIR}/build/configs)
 # Standard directory for the test circuit files.
 set (TEST_CIRCUIT_DIRECTORY ${PARENT_DIR}/build/test_circuits)
 
-# Create the additional folders to organize the configs, images etc. in a beter way.
+# Create the additional folders to organize the configs, images etc. in a better way.
 add_custom_target(create_folders)
 
 add_custom_command(

@@ -22,7 +22,7 @@ int main (int argc, char *argv[])
         help_string.append("/sim.config");
 
 	// Read the configuration file and get the parameter.
-	EDDAmisc::ReadConfig read_config(help_string);
+	SPFR::ReadConfig read_config(help_string);
 
         std::string test_track = "Circle";
         std::string ode_model = "simple";
